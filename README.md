@@ -1,5 +1,46 @@
 # Standalone Installation
 
+TestBrain can be installed on your own servers, either on physical servers or on your own cloud
+infrastructure. For maximum security, the on‐premises version has no communications with TestBrain or
+other 3rd parties. Installation of a license key provided by Appsurify is required for operation of the
+software. You will need to install software updates yourself.
+There are two options for on‐premises installation:
+(1) 3 separate servers for PostgreSQL, RabbitMQ, and TestBrain (Docker image); or
+(2) All functionality installed on a single server in a single Docker image.
+The 3 server setup is easier and faster to install and maintain and is therefore the preferred installation,
+but a single server installation is available for users who want to minimize hardware requirements.
+
+## Minimum Requirements
+
+### 3 Server Installation
+
+Server 1: PostgreSQL
+- CPU: 2
+- RAM: 8GB
+- SSD: 100GB
+- CentOS 7
+Server 2: RabbitMQ
+- CPU: 1
+- RAM: 1GB
+- SSD: 40GB
+- CentOS 7
+Server 3: Docker image for TestBrain Web Application and Celery Worker
+- CPU: 4
+- RAM: 8GB
+- SSD: 100GB
+- CentOS 7
+
+### Single Server Installations
+Minimum Hardware Requirements
+- CPU: 8
+- RAM: 16 GB (Prefer 32)
+- SSD: 16 GB
+- HDD: 100GB
+- CentOS 7
+
+Note: CentOS 7 is the preferred operating system. TestBrain images can run on other operating
+systems. Please contact Appsurify support for assistance installing on any other operation system.
+
 To run a new instance of the TestBrain service in a docker container:
 
 1. [Pull TestBrain Image](#pull-testBrain-image)
